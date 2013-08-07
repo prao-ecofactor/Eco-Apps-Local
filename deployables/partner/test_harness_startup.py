@@ -16,4 +16,4 @@ import deployables.test_harness.test_service
 #   End of Rest Service Controller import section
 #
 from bottle import run, Bottle, default_app
-run(host=config.get("webserver", "hostname"), port=config.get("webserver", "port"), server="cherrypy", debug=config.get("webserver", "debug"),options={"numthreads":30})
+#run(host=config.get("webserver", "hostname"), port=config.get("webserver", "port"), server="cherrypy", debug=config.get("webserver", "debug"),options={"numthreads":30})

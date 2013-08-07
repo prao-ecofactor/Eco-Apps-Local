@@ -17,4 +17,4 @@ import deployables.partner.user_location_service
 #
 from bottle import run, Bottle, default_app
 app=default_app()
-run(app,host=config.get("webserver", "hostname"), port=config.get("webserver", "port"), server="cherrypy", debug=config.get("webserver", "debug"),options={"numthreads":30}) 
+#run(app,host=config.get("webserver", "hostname"), port=config.get("webserver", "port"), server="cherrypy", debug=config.get("webserver", "debug"),options={"numthreads":30}) 
