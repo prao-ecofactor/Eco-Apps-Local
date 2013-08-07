@@ -3,10 +3,10 @@
 
 # Connection pooling can happen here, as can standardized logging messages for failure modes
 
-import logging
+from common import eflogging
 
 # A thin wrapper around cursor.execute().  See http://www.python.org/dev/peps/pep-0249/ for more details on this method
-logger = logging.getLogger('db')
+logger = eflogging.getLogger('db')
 def fetchData(connection,sql, params=None):
     cursor = connection.cursor()
     cursor.execute(sql, params)

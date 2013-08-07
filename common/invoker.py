@@ -10,8 +10,8 @@
 #        for translating between invoked params and what needs to be passed via a webservice call in the future, params must be formatted as
 #        a string that is acceptable in a URL.
 
-import common.eflogging as logging
-logger = logging.getLogger('invoker')
+from common import eflogging
+logger = eflogging.getLogger('invoker')
 def invoke( method, service, request_params = None,context_params=None):
     # Parse out and validate the URI
     if method != 'GET' and method != 'POST' and method != 'PUT' and method != 'DELETE':

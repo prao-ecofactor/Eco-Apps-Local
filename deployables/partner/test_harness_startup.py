@@ -1,6 +1,3 @@
-if __name__ != "__main__":
-    raise Exception("This module is intended to be run as the server.  Do not include this from other sources.")
-
 #Begin of server global configuration and imports
 #Please do not add any service imports above this.
 

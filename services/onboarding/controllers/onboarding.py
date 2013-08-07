@@ -1,15 +1,15 @@
-import logging
-from common.invoker import invoke
+from common import eflogging
 from common.error_view import Error
 from common.exception import ServiceException
+from common.invoker import invoke
 
-logger=logging.getLogger("onboarding")
+logger=eflogging.getLogger("onboarding")
 #Add parameter validation here
 def POST(request_params,context_params):
+    logger.info("Start of user onboarding")
     location_params = {}
     location_params['locations']= request_params.pop('locations')
     user_params = request_params
-    logger.info("Start of user onboarding %s %s" %(user_params,location_params))
     
     try:
         user_response = invoke('POST','user',user_params,context_params)

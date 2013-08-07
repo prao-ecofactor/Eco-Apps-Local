@@ -1,10 +1,10 @@
 from bottle import post,hook,request, Bottle,run,default_app
 from common.invoker import invoke
 from common.parameter_util import get_param
-import logging
 from common.request_util import get_request_id
+from common import eflogging
 
-logger = logging.getLogger("create_user_location")
+logger = eflogging.getLogger("create_user_location")
 app=default_app()
 
 @app.post('/services/CMCSA/data/v1.0/user')
@@ -19,7 +19,6 @@ def create_user_location():
 def before_request():
     request.environ['guid']=get_request_id()
     logger.info('Before request to %s %s' % (request.method, request.path))
-    # Need to move this to initializing request globals
   
 @hook('after_request')
 def after_request():

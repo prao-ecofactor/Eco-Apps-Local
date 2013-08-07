@@ -3,9 +3,9 @@ from common.invoker import invoke
 # from validator.thermostat_validator import validate_update_thermostat
 from common.error_view import Error
 import logging
-from logging import thread
+from common import eflogging
 
-logger = logging.getLogger("test_service")
+logger = eflogging.getLogger("test_service")
 
 @get('/ws/consumer/v1.0/thermostat/<thermostat_id:int>')
 def readThermostat(thermostat_id=False):
